@@ -57,12 +57,13 @@ namespace CreamMUProduct.Controllers
         {
             //if (id == null)
             //    return RedirectToAction("ProductList");
-            //ViewBag.FId = id;
+            
             //return View();
             if (id == null)
                 return RedirectToAction("ProductList");
             CreamMUTestDBContext db = new CreamMUTestDBContext();
             TProduct prod = db.TProducts.FirstOrDefault(p => p.ProductId == id);
+            ViewBag.FId = id;
             return View(prod);
         }
         [HttpPost]
