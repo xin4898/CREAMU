@@ -37,13 +37,13 @@
         {
             <div class="col-md-4 mb-4">
                 <div class="card">
-                    <a href="@Url.Action("ProductDetail", "Product", new { id = item.ProductId })">
+                    <a href="@Url.Action("AddToCart", "Product", new { id = item.ProductId })">
                         <img src="~/images/@item.PImages" class="card-img-top" alt="商品圖片" style="width: 250px; height: 250px;">
                     </a>
                     <div class="card-body">
                         <h5 class="card-title">@item.PName</h5>
                         <p class="card-text">單價: @item.PPrice</p>
-                        <a href="@Url.Action("AddCar","Member")?id=@item.ProductId" class="btn btn-secondary">加入購物車</a>
+                        <a href="@Url.Action("AddToCart","Product")?id=@item.ProductId" class="btn btn-secondary">加入購物車</a>
                     </div>
                 </div>
             </div>

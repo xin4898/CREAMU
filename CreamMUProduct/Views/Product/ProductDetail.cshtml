@@ -1,11 +1,11 @@
-﻿@model CreamMUProduct.Models.TProduct
+﻿@*model CreamMUProduct.Models.TProduct
 @{
     ViewData["Title"] = "ProductDetail";
 }
 
 <h1 class="">ProductDetail</h1>
 
-@*商品選單跳轉連結*@
+商品選單跳轉連結
 <div class="navbar navbar-expand-lg navbar-dark bg-light">
     <div class="container-fluid">
         <div class="block-inner">    
@@ -33,7 +33,7 @@
             <h3>NT$@Model.PPrice</h3>         
             <h4 style="display: inline-block;">數量</h4>
             <div class="input-group">
-@*產品數量增減按鈕*@
+產品數量增減按鈕
   <div class="input-group-prepend">
     <button class="btn btn-outline-secondary" type="button" onclick="decreaseQuantity()">-</button>
   </div>
@@ -42,9 +42,11 @@
     <button class="btn btn-outline-secondary" type="button" onclick="increaseQuantity()">+</button>
   </div>
 </div>
+
+
   <div class="col-md-12">
     <div class="d-grid">
-      <button class="btn btn-primary mt-2" onclick="addToCart()">加入購物車</button>
+      <a href="@Url.Action("AddToCart","Product")?id=@Model.ProductId" class="btn btn-secondary">加入購物車</a>
     </div>
   </div>
 </div>
@@ -59,7 +61,7 @@
       quantityInput.value = parseInt(quantityInput.value) - 1;
     }
   }
-  @*加*@
+  加
   function increaseQuantity() {
     var quantityInput = document.getElementById('quantityInput');
     quantityInput.value = parseInt(quantityInput.value) + 1;
@@ -67,4 +69,4 @@
 </script>
         
    
-}
+}*@

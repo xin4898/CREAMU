@@ -1,6 +1,7 @@
 ﻿using CreamMUProduct.Models;
 using CreamMUProduct.ViewModels;
 using Microsoft.AspNetCore.Mvc;
+using System.Text.Json;
 
 namespace CreamMUProduct.Controllers
 {
@@ -13,6 +14,19 @@ namespace CreamMUProduct.Controllers
         //}
 
         //產品選單(已組裝完成的產品)
+
+        public IActionResult CartView()
+        {
+            if (!HttpContext.Session.Keys.Contains(CDictionary.SK_PURCHASED_PRODUCTS_LIST))
+                return RedirectToAction("ProductList");
+
+            string json = HttpContext.Session.GetString(CDictionary.SK_PURCHASED_PRODUCTS_LIST);
+            List<CShoppingCartItem> cart = JsonSerializer.Deserialize<List<CShoppingCartItem>>(json);
+            if (cart == null)
+                return RedirectToAction("ProductList");
+            return View(cart);
+        }
+
         public IActionResult ProductList(CKeywordViewModel vm)
         {
             string keyword = vm.txtKeyword;
@@ -28,50 +42,55 @@ namespace CreamMUProduct.Controllers
             return View(datas);
         }
         //產品細節頁面
-        public ActionResult ProductDetail(int? id)
-        {
-            if (id == null)
-                return RedirectToAction("ProductList");
-            CreamMUTestDBContext db = new CreamMUTestDBContext();
-            TProduct prod = db.TProducts.FirstOrDefault(p => p.ProductId == id);
-            return View(prod);
-
-        }
-
-        //public ActionResult Edit(int? id)
+        //public ActionResult ProductDetail(int? id)
         //{
         //    if (id == null)
         //        return RedirectToAction("ProductList");
         //    CreamMUTestDBContext db = new CreamMUTestDBContext();
         //    TProduct prod = db.TProducts.FirstOrDefault(p => p.ProductId == id);
         //    return View(prod);
+
         //}
-        //[HttpPost]
-        //public ActionResult Edit(CProductWraper x)
-        //{
-        //    CreamMUTestDBContext db = new CreamMUTestDBContext();
-        //    TProduct prod = db.TProducts.FirstOrDefault(p => p.ProductId == x.FId);
-        //    if (prod != null)
-        //    {
-        //        if (x.photo != null)
-        //        {
-        //            string photoName = Guid.NewGuid().ToString() + ".jpg";
-        //            x.photo.CopyTo(new FileStream(
-        //                _enviro.WebRootPath + "/images/" + photoName,
-        //                FileMode.Create));
-        //            prod.PImages = photoName;
-        //        }
-        //        prod.PName = x.FName;
-        //        prod.PTypeId = x.PTypeId;
-        //        prod.PPrice = x.PPrice;
-        //        prod.PInstock = x.PInstock;
-        //        prod.PStatus = x.PStatus;
-        //        prod.PStatus = x.PStatus;
-        //        prod.PReleaseDate = x.PReleaseDate;
-        //        prod.EmployeeId = x.EmployeeId;
-        //        db.SaveChanges();
-        //    }
-        //    return RedirectToAction("ProductList");
-        //}
+
+        //加入購物車
+        public ActionResult AddToCart(int? id)
+        {
+            //if (id == null)
+            //    return RedirectToAction("ProductList");
+            //ViewBag.FId = id;
+            //return View();
+            if (id == null)
+                return RedirectToAction("ProductList");
+            CreamMUTestDBContext db = new CreamMUTestDBContext();
+            TProduct prod = db.TProducts.FirstOrDefault(p => p.ProductId == id);
+            return View(prod);
+        }
+        [HttpPost]
+        public ActionResult AddToCart(CAddToCartViewModel vm)
+        {
+            CreamMUTestDBContext db = new CreamMUTestDBContext();
+            TProduct prod = db.TProducts.FirstOrDefault(t => t.ProductId == vm.txtFId);
+            if (prod != null)
+            {
+                string json = "";
+                List<CShoppingCartItem> cart = null;
+                if (HttpContext.Session.Keys.Contains(CDictionary.SK_PURCHASED_PRODUCTS_LIST))
+                {
+                    json = HttpContext.Session.GetString(CDictionary.SK_PURCHASED_PRODUCTS_LIST);
+                    cart = JsonSerializer.Deserialize<List<CShoppingCartItem>>(json);
+                }
+                else
+                    cart = new List<CShoppingCartItem>();
+                CShoppingCartItem item = new CShoppingCartItem();
+                item.price = (decimal)prod.PPrice;
+                item.productId = vm.txtFId;
+                item.count = vm.txtCount;
+                item.product = prod;
+                cart.Add(item);
+                json = JsonSerializer.Serialize(cart);
+                HttpContext.Session.SetString(CDictionary.SK_PURCHASED_PRODUCTS_LIST, json);
+            }
+            return RedirectToAction("ProductList");
+        }
     }
 }
