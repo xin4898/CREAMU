@@ -1,0 +1,40 @@
+﻿@model List<m0611.Models.OrderDetail>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1 class="mt-5 mb-5">Order Detail</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">ODID</th>
+            <th scope="col">OID</th>
+            <th scope="col">PID</th>
+            <th scope="col">QTY</th>
+            <th scope="col">UnitOrice</th>
+            <th scope="col">Discount</th>
+            <th scope="col">Subtotal</th>
+            <th scope="col">Note</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Person in Model)
+        {
+            <tr>
+                <td>@Person.OrderDetailId</td>
+                <td>@Person.OrderId</td>
+                <td>@Person.ProductId</td>
+                <td>@Person.Qty</td>
+                <td>@Person.UnitPrice</td>
+                <td>@Person.Discount</td>
+                <td>@Person.Subtotal</td>
+                <td>@Person.Notes</td>
+
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,79 @@
+﻿
+
+
+/* <!-- 上方付款進度條 --> */
+/* progress bar zone */
+.progress-zone {
+    background-color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 1rem;
+}
+
+/* icon */
+.progress-icon {
+    background-color: rgb(240, 228, 194);
+    margin: 0;
+}
+
+/* 在小螢幕時隱藏文字方塊 */
+.progressbar-text {
+    display: none;
+    background-color: rgb(240, 228, 194);
+    margin: 0;
+}
+
+/* 在大螢幕時顯示文字方塊 */
+@media screen and (min-width: 768px) {
+    .progressbar-text {
+        display: inline;
+    }
+}
+
+/* <!-- 商品明細區這裡要串接資料庫並且會讀資料庫有多少筆資料跟著變長 --> */
+/* 商品明細區 */
+.product-detail-zone {
+    background-color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+.product-detailtitle {
+    background-color: white;
+}
+
+.product-table {
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media (min-width: 768px) {
+    .product-table {
+        margin-left: 3rem;
+        margin-right: 3rem;
+    }
+}
+
+.product-detail {
+    background-color: white;
+}
+
+.product-detail-footer {
+    background-color: white;
+}
+
+
+/* <!-- 下方按鈕取消與確認按鈕 --> */
+.sent-zone {
+    background-color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+/* <!-- 購買規範說明 --> */
+

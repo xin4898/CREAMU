@@ -1,0 +1,81 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = m0611
+build_property.RootNamespace = m0611
+build_property.ProjectDir = D:\workfile\vswindowsform\m0611\m0611\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = D:\workfile\vswindowsform\m0611\m0611
+build_property._RazorSourceGeneratorDebug = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/Cartpagemethod/sesstiontest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydHBhZ2VtZXRob2Rcc2Vzc3Rpb250ZXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/Home/cart1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxjYXJ0MS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/Home/paymentpage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwYXltZW50cGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/Home/postaddresspage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwb3N0YWRkcmVzc3BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/Home/pp.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/Home/pp1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxwcDEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/Home/s.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/sesstiontest/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2Vzc3Rpb250ZXN0XEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/sesstiontest/sesstiontest.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3Ncc2Vzc3Rpb250ZXN0XHNlc3N0aW9udGVzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/workfile/vswindowsform/m0611/m0611/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-mve8qfivei
