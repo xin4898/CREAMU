@@ -1,0 +1,36 @@
+﻿@model List<creamMUProductFinal.Models.Employee>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">商品明細</th>
+            <th scope="col">單價</th>
+            <th scope="col">數量</th>
+            <th scope="col">小計</th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach (var haha in Model)
+        {
+            <tr>
+                <td>關連到商品描述這邊需要viewmodel</td>
+                <td>@haha.EmployeeId</td>
+               
+               
+
+            </tr>
+
+        }
+    </tbody>
+</table>
